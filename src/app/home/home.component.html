@@ -1,0 +1,21 @@
+<h1>Personajes Humanos</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Tipo</th>
+      <th>Dimensión</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let character of characters">
+      <td>{{ character.name }}</td>
+      <td>{{ character.type || 'Desconocido' }}</td>
+      <td>{{ character.origin?.name || 'Desconocido' }}</td>
+      <td>
+        <button (click)="goToCharacterList(character.species)">Ver personajes</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
