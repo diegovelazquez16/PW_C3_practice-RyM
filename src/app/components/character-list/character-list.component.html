@@ -1,0 +1,13 @@
+<div class="species-container">
+    <div *ngFor="let species of groupedCharacters | keyvalue" class="species-group">
+      <h2>{{ species.key }}</h2>
+      <div class="card-container">
+        <div *ngFor="let character of species.value" class="card">
+          <img [src]="character.image" [alt]="character.name" class="character-image" />
+          <h3>{{ character.name }}</h3>
+          <p><strong>Origen:</strong> {{ character.origin }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
